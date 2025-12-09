@@ -19,7 +19,7 @@ const ReviewForm = ({ brokerId, token, onReviewAdded }) => {
     try {
       setLoading(true)
       const res = await axios.post(
-        `http://localhost:5001/api/users/${brokerId}/reviews`,
+        `https://reliestate-4.onrender.com/api/users/${brokerId}/reviews`,
         { rating, comment },
         {
           headers: {

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 //Create a section of global state + functions to update it.
 
-const API_URL = "http://localhost:5001/api/auth";
+const API_URL = "https://reliestate-4.onrender.com/api/auth";
 
 // Load data from localStorage if available
 const user = localStorage.getItem("user");

@@ -97,7 +97,7 @@ exports.getDashboard = async (req, res) => {
             message: "Admin dashboard data fetched successfully",
         });
     } catch (error) {
-        console.error("❌ Get Dashboard Error:", error);
+        console.error("Get Dashboard Error:", error);
         res.status(500).json({ message: "Failed to fetch dashboard data", error: error.message });
     }
 };

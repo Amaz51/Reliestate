@@ -27,7 +27,7 @@ exports.uploadImages = async (files) => {
 
         return uploaded;
     } catch (error) {
-        console.error("❌ Image upload failed:", error);
+        console.error("Image upload failed:", error);
         throw new Error(`Image upload failed: ${error.message}`);
     }
 };

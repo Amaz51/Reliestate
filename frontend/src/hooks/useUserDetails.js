@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/users";
+const API_URL = "https://reliestate-4.onrender.com/api/users";
 
 export const useUserDetails = (userId, token) => {
   const [user, setUser] = useState(null);

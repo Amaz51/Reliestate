@@ -160,7 +160,7 @@ exports.login = async (req, res) => {
             }
         });
     } catch (error) {
-        console.error("❌ Login Error:", error);
+        console.error("Login Error:", error);
         res.status(500).json({ message: "Error logging in", error: error.message });
     }
 };
@@ -201,7 +201,7 @@ exports.refreshToken = async (req, res) => {
             refreshToken: newRefreshToken
         });
     } catch (error) {
-        console.error("❌ Refresh Token Error:", error);
+        console.error("Refresh Token Error:", error);
         res.status(500).json({ message: "Error refreshing token", error: error.message });
     }
 };
@@ -235,7 +235,7 @@ exports.logout = async (req, res) => {
         console.log(`User ${user.email} logged out successfully`);
         res.status(200).json({ message: "Logged out successfully" });
     } catch (error) {
-        console.error("❌ Logout Error:", error);
+        console.error("Logout Error:", error);
         res.status(500).json({ message: "Error logging out", error: error.message });
     }
 };
@@ -266,7 +266,7 @@ exports.forgetPassword = async (req, res) => {
 
         res.status(200).json({ message: "If this email is registered, an OTP will be sent" });
     } catch (error) {
-        console.error("❌ Forget Password Error:", error);
+        console.error("Forget Password Error:", error);
         res.status(500).json({ message: "Something went wrong, try again later", error: error.message });
     }
 };
@@ -302,7 +302,7 @@ exports.resetPassword = async (req, res) => {
 
         res.status(200).json({ message: "Password reset successfully" });
     } catch (error) {
-        console.error("❌ Reset Password Error:", error);
+        console.error("Reset Password Error:", error);
         res.status(500).json({ message: "Something went wrong, try again later", error: error.message });
     }
 };

@@ -53,7 +53,7 @@ const AdminDashboard = () => {
     const fetchDashboard = async () => {
       try {
         setLoading(true)
-        const res = await axios.get("http://localhost:5001/api/admin/dashboard", {
+        const res = await axios.get("https://reliestate-4.onrender.com/api/admin/dashboard", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

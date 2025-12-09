@@ -13,7 +13,7 @@ export const useMyInquiries = (token, page = 1, limit = 10) => {
     const fetchInquiries = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5001/api/inquiries/me?page=${page}&limit=${limit}`,
+          `https://reliestate-4.onrender.com/api/inquiries/me?page=${page}&limit=${limit}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

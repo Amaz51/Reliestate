@@ -20,7 +20,7 @@ const InquiryForm = ({ propertyId, token }) => {
     try {
       setLoading(true)
       const res = await axios.post(
-        "http://localhost:5001/api/inquiries",
+        "https://reliestate-4.onrender.com/api/inquiries",
         {
           name,
           phone,

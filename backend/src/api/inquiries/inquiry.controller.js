@@ -30,7 +30,7 @@ exports.createInquiry = async (req, res) => {
             data: newInquiry,
         });
     } catch (error) {
-        console.error("❌ Create Inquiry Error:", error);
+        console.error("Create Inquiry Error:", error);
         res.status(500).json({ message: "Failed to send inquiry", error: error.message });
     }
 };
@@ -66,7 +66,7 @@ exports.getMyInquiries = async (req, res) => {
             message: "Inquiries fetched successfully",
         });
     } catch (error) {
-        console.error("❌ Get My Inquiries Error:", error);
+        console.error("Get My Inquiries Error:", error);
         res.status(500).json({ message: "Failed to fetch inquiries", error: error.message });
     }
 };

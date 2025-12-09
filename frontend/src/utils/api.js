@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api", // Change this for production
+  baseURL: "https://reliestate-4.onrender.com/api", // Change this for production
   withCredentials: true, 
 });
 

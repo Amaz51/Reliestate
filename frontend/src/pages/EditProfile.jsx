@@ -81,7 +81,7 @@ const EditProfile = () => {
     setErrorMsg(null)
 
     try {
-      await axios.put("http://localhost:5001/api/users/update-profile", formData, {
+      await axios.put("https://reliestate-4.onrender.com/api/users/update-profile", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

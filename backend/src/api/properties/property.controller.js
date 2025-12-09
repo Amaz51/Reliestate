@@ -69,7 +69,7 @@ exports.createProperty = async (req, res) => {
 
         res.status(201).json({ message: "Property created successfully", property });
     } catch (error) {
-        console.error("❌ Property Creation Error:", error);
+        console.error("Property Creation Error:", error);
         res.status(500).json({ message: "Property creation failed", error: error.message });
     }
 };
@@ -137,7 +137,7 @@ exports.getAllProperties = async (req, res) => {
             meta,
         });
     } catch (error) {
-        console.error("❌ Get All Properties Error:", error);
+        console.error("Get All Properties Error:", error);
         res.status(500).json({ message: "Failed to fetch properties", error: error.message });
     }
 };
@@ -155,7 +155,7 @@ exports.getPropertyBySlug = async (req, res) => {
             message: "Property fetched successfully",
         });
     } catch (error) {
-        console.error("❌ Get Property By Slug Error:", error);
+        console.error("Get Property By Slug Error:", error);
         res.status(500).json({ message: "Failed to fetch property", error: error.message });
     }
 };
@@ -209,7 +209,7 @@ exports.getUserProperties = async (req, res) => {
             meta,
         });
     } catch (error) {
-        console.error("❌ Get User Properties Error:", error);
+        console.error("Get User Properties Error:", error);
         res.status(500).json({ message: "Failed to fetch user properties", error: error.message });
     }
 };
@@ -282,7 +282,7 @@ exports.updateProperty = async (req, res) => {
             property: updatedProperty,
         });
     } catch (error) {
-        console.error("❌ Update Property Error:", error);
+        console.error("Update Property Error:", error);
         res.status(500).json({ message: "Failed to update property", error: error.message });
     }
 };
@@ -303,7 +303,7 @@ exports.deleteProperty = async (req, res) => {
         await Property.findByIdAndDelete(id);
         res.status(200).json({ message: "Property deleted successfully" });
     } catch (error) {
-        console.error("❌ Delete Property Error:", error);
+        console.error("Delete Property Error:", error);
         res.status(500).json({ message: "Failed to delete property", error: error.message });
     }
 };

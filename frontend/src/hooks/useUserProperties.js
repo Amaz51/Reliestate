@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/properties/user";
+const API_URL = "https://reliestate-4.onrender.com/api/properties/user";
 
 export const useUserProperties = (userId, token, page = 1, limit = 10) => {
   const [properties, setProperties] = useState([]);

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/properties";
+const API_URL = "https://reliestate-4.onrender.com/api/properties";
 
 const initialState = {
   properties: [],
