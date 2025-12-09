@@ -14,6 +14,8 @@ import ProtectedAdminRoute from "./AdminRoutes";
 import AdminDashboard from "../pages/AdminDashboard";
 import EditProperty from "../pages/EditProperty";
 import EditProfile from "../pages/EditProfile";
+import ForgotPassword from "../pages/ForgotPassword";
+import ResetPassword from "../pages/ResetPassword";
 
 export default function AppRoutes() {
   return (
@@ -23,6 +25,8 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/verify-otp" element={<VerifyOTP />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/browse" element={<PropertyList />} />
         <Route path="/properties/:slug" element={<ProtectedRoute><PropertyDetails /></ProtectedRoute>} />
         <Route path="/users/:userId" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />

@@ -97,7 +97,7 @@ const PropertyList = () => {
                   className="pl-10 w-full py-3 px-4 rounded-md text-white focus:outline-none border-1 border-white focus:ring-2"
                 />
               </div>
-              <button className="bg-red-600 hover:bg-red-400 text-white py-3 px-6 rounded-md flex items-center justify-center transition-colors">
+              <button className="bg-blue-600 hover:bg-blue-400 text-white py-3 px-6 rounded-md flex items-center justify-center transition-colors">
                 <Filter className="h-5 w-5 mr-2" />
                 Filter
               </button>
@@ -116,7 +116,7 @@ const PropertyList = () => {
               <select
                 value={filters.sort}
                 onChange={(e) => setFilters({ ...filters, sort: e.target.value })}
-                className="border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="createdAt:desc">Newest</option>
                 <option value="price:asc">Price: Low to High</option>
@@ -128,15 +128,15 @@ const PropertyList = () => {
 
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20">
-              <Loader className="h-12 w-12 text-red-600 animate-spin mb-4" />
+              <Loader className="h-12 w-12 text-blue-600 animate-spin mb-4" />
               <p className="text-gray-600">Loading properties...</p>
             </div>
           ) : error ? (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-8 rounded-lg text-center">
+            <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-8 rounded-lg text-center">
               <p className="text-lg font-medium">{error}</p>
               <button
                 onClick={() => dispatch(fetchProperties({ page, limit }))}
-                className="mt-4 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors"
+                className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
               >
                 Try Again
               </button>
@@ -168,7 +168,7 @@ const PropertyList = () => {
                         {/* Property Purpose Tag */}
                         <div className="absolute top-4 left-4">
                           <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${property.purpose === "rent" ? "bg-blue-600" : "bg-red-600"} text-white`}
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${property.purpose === "rent" ? "bg-blue-600" : "bg-blue-600"} text-white`}
                           >
                             {property.purpose === "rent" ? "For Rent" : "For Sale"}
                           </span>
@@ -180,7 +180,7 @@ const PropertyList = () => {
                           className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors"
                         >
                           <Heart
-                            className={`h-5 w-5 ${favorites.includes(property.slug) ? "fill-red-600 text-red-600" : "text-gray-700"}`}
+                            className={`h-5 w-5 ${favorites.includes(property.slug) ? "fill-blue-600 text-blue-600" : "text-gray-700"}`}
                           />
                         </button>
 
@@ -227,7 +227,7 @@ const PropertyList = () => {
                         {/* View Details Button */}
                         <Link
                           to={`/properties/${property.slug}`}
-                          className="mt-5 w-full inline-block text-center py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors font-medium"
+                          className="mt-5 w-full inline-block text-center py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
                         >
                           View Details
                         </Link>
@@ -268,7 +268,7 @@ const PropertyList = () => {
                           key={i}
                           onClick={() => setPage(pageNum)}
                           className={`w-10 h-10 mx-1 rounded-md flex items-center justify-center ${page === pageNum
-                              ? "bg-red-600 text-white"
+                              ? "bg-blue-600 text-white"
                               : "border border-gray-300 hover:bg-gray-100 transition-colors"
                             }`}
                         >

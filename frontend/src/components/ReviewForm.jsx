@@ -19,7 +19,7 @@ const ReviewForm = ({ brokerId, token, onReviewAdded }) => {
     try {
       setLoading(true)
       const res = await axios.post(
-        `http://localhost:5000/api/users/${brokerId}/reviews`,
+        `http://localhost:5001/api/users/${brokerId}/reviews`,
         { rating, comment },
         {
           headers: {
@@ -53,8 +53,8 @@ const ReviewForm = ({ brokerId, token, onReviewAdded }) => {
 
       {/* Error Message */}
       {error && (
-        <div className="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md flex items-start">
-          <AlertCircle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+        <div className="mb-6 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-md flex items-start">
+          <AlertCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
           <p>{error}</p>
         </div>
       )}
@@ -104,7 +104,7 @@ const ReviewForm = ({ brokerId, token, onReviewAdded }) => {
             onChange={(e) => setComment(e.target.value)}
             rows={4}
             placeholder="Share your experience with this agent..."
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
         </div>
@@ -113,7 +113,7 @@ const ReviewForm = ({ brokerId, token, onReviewAdded }) => {
         <button
           type="submit"
           disabled={loading || !comment.trim()}
-          className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {loading ? (
             <>

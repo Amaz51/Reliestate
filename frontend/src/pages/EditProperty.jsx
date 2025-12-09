@@ -100,7 +100,7 @@ const EditProperty = () => {
           {/* Back Link */}
           <Link
             to="/dashboard"
-            className="inline-flex items-center text-gray-100 hover:text-red-600 transition-colors mt-6"
+            className="inline-flex items-center text-gray-100 hover:text-blue-600 transition-colors mt-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Dashboard
@@ -124,12 +124,12 @@ const EditProperty = () => {
           )}
 
           {error && (
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <div className="flex">
-                <AlertCircle className="h-6 w-6 text-red-500 mr-3" />
+                <AlertCircle className="h-6 w-6 text-blue-500 mr-3" />
                 <div>
-                  <p className="font-medium text-red-800">Error</p>
-                  <p className="text-red-700 mt-1">{error}</p>
+                  <p className="font-medium text-blue-800">Error</p>
+                  <p className="text-blue-700 mt-1">{error}</p>
                 </div>
               </div>
             </div>

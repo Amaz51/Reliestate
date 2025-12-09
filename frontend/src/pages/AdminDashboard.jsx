@@ -53,7 +53,7 @@ const AdminDashboard = () => {
     const fetchDashboard = async () => {
       try {
         setLoading(true)
-        const res = await axios.get("http://localhost:5000/api/admin/dashboard", {
+        const res = await axios.get("http://localhost:5001/api/admin/dashboard", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
   if (loading)
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <Loader className="h-12 w-12 text-red-600 animate-spin mb-4" />
+        <Loader className="h-12 w-12 text-blue-600 animate-spin mb-4" />
         <p className="text-gray-600">Loading admin dashboard...</p>
       </div>
     )
@@ -84,12 +84,12 @@ const AdminDashboard = () => {
   if (error)
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
-        <div className="bg-red-50 border border-red-200 text-red-700 px-6 py-8 rounded-lg text-center max-w-md">
-          <AlertCircle className="h-12 w-12 text-red-600 mx-auto mb-4" />
+        <div className="bg-blue-50 border border-blue-200 text-blue-700 px-6 py-8 rounded-lg text-center max-w-md">
+          <AlertCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
           <p className="text-lg font-medium mb-2">{error}</p>
           <button
             onClick={() => window.location.reload()}
-            className="mt-4 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors"
+            className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
           >
             Try Again
           </button>
@@ -170,7 +170,7 @@ const AdminDashboard = () => {
           <StatCard
             label="Total Properties"
             value={overview.totalProperties}
-            icon={<Home className="h-6 w-6 text-red-600" />}
+            icon={<Home className="h-6 w-6 text-blue-600" />}
             change={getPropertiesChange()}
             color="red"
           />
@@ -195,12 +195,12 @@ const AdminDashboard = () => {
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-                <div className="bg-red-100 p-2 rounded-md mr-3">
-                  <PieChartIcon className="h-5 w-5 text-red-600" />
+                <div className="bg-blue-100 p-2 rounded-md mr-3">
+                  <PieChartIcon className="h-5 w-5 text-blue-600" />
                 </div>
                 <h2 className="text-lg font-bold">User Distribution</h2>
               </div>
-              <button className="text-sm text-red-600 hover:text-red-800 font-medium flex items-center">
+              <button className="text-sm text-blue-600 hover:text-blue-900 font-medium flex items-center">
                 View All <ChevronRight className="h-4 w-4 ml-1" />
               </button>
             </div>
@@ -229,12 +229,12 @@ const AdminDashboard = () => {
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-                <div className="bg-red-100 p-2 rounded-md mr-3">
-                  <BarChart3 className="h-5 w-5 text-red-600" />
+                <div className="bg-blue-100 p-2 rounded-md mr-3">
+                  <BarChart3 className="h-5 w-5 text-blue-600" />
                 </div>
                 <h2 className="text-lg font-bold">Property Status</h2>
               </div>
-              <button className="text-sm text-red-600 hover:text-red-800 font-medium flex items-center">
+              <button className="text-sm text-blue-600 hover:text-blue-900 font-medium flex items-center">
                 View All <ChevronRight className="h-4 w-4 ml-1" />
               </button>
             </div>
@@ -257,12 +257,12 @@ const AdminDashboard = () => {
             <div className="px-6 py-4 border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="bg-red-100 p-2 rounded-md mr-3">
-                    <User className="h-5 w-5 text-red-600" />
+                  <div className="bg-blue-100 p-2 rounded-md mr-3">
+                    <User className="h-5 w-5 text-blue-600" />
                   </div>
                   <h2 className="text-lg font-bold">Recent Users</h2>
                 </div>
-                <button className="text-sm text-red-600 hover:text-red-800 font-medium flex items-center">
+                <button className="text-sm text-blue-600 hover:text-blue-900 font-medium flex items-center">
                   View All <ChevronRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
@@ -308,7 +308,7 @@ const AdminDashboard = () => {
                         <span
                           className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${
                             user.role === "admin"
-                              ? "bg-red-100 text-red-800"
+                              ? "bg-blue-100 text-blue-900"
                               : user.role === "broker"
                                 ? "bg-blue-100 text-blue-800"
                                 : "bg-green-100 text-green-800"
@@ -318,7 +318,7 @@ const AdminDashboard = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <button className="text-red-600 hover:text-red-900 mr-3">
+                        <button className="text-blue-600 hover:text-blue-900 mr-3">
                           <Eye className="h-4 w-4" />
                         </button>
                       </td>
@@ -333,12 +333,12 @@ const AdminDashboard = () => {
             <div className="px-6 py-4 border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="bg-red-100 p-2 rounded-md mr-3">
-                    <Home className="h-5 w-5 text-red-600" />
+                  <div className="bg-blue-100 p-2 rounded-md mr-3">
+                    <Home className="h-5 w-5 text-blue-600" />
                   </div>
                   <h2 className="text-lg font-bold">Recent Properties</h2>
                 </div>
-                <button className="text-sm text-red-600 hover:text-red-800 font-medium flex items-center">
+                <button className="text-sm text-blue-600 hover:text-blue-900 font-medium flex items-center">
                   View All <ChevronRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
@@ -396,7 +396,7 @@ const AdminDashboard = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <button className="text-red-600 hover:text-red-900 mr-3">
+                        <button className="text-blue-600 hover:text-blue-900 mr-3">
                           <Eye className="h-4 w-4" />
                         </button>
                       </td>
@@ -420,7 +420,7 @@ const StatCard = ({ label, value, icon, change, color }) => {
   const getColorClass = (color) => {
     switch (color) {
       case "red":
-        return "bg-red-50"
+        return "bg-blue-50"
       case "blue":
         return "bg-blue-50"
       case "green":
@@ -438,7 +438,7 @@ const StatCard = ({ label, value, icon, change, color }) => {
         <div className={`p-3 rounded-md ${getColorClass(color)}`}>{icon}</div>
         {change && (
           <div
-            className={`flex items-center text-sm ${change.increase ? "text-green-600" : "text-red-600"} font-medium`}
+            className={`flex items-center text-sm ${change.increase ? "text-green-600" : "text-blue-600"} font-medium`}
           >
             {change.increase ? <ArrowUpRight className="h-4 w-4 mr-1" /> : <ArrowDownRight className="h-4 w-4 mr-1" />}
             {change.value}%

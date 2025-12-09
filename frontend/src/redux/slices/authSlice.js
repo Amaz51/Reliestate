@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+//Create a section of global state + functions to update it.
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "http://localhost:5001/api/auth";
 
 // Load data from localStorage if available
 const user = localStorage.getItem("user");
@@ -16,7 +17,6 @@ const initialState = {
   error: null,
 };
 
-// === THUNKS ===
 // Login Thunk
 export const login = createAsyncThunk("auth/login", async (credentials, { rejectWithValue }) => {
   try {

@@ -4,7 +4,12 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
-
+const allowedOrigins = ['http://localhost:5173']; // Frontend origin
+const app = express();
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true, // allow cookies
+}));
 // Import Routes
 const authRoutes = require("./api/auth/auth.routes");
 const userRoutes = require("./api/users/user.routes");
@@ -16,14 +21,19 @@ const adminRoutes = require("./api/admin/admin.routes");
 dotenv.config();
 
 // Create Express app
-const app = express();
+
 
 // Middleware
-app.use(cors({ credentials: true, origin: true }));
+
 app.use(morgan("dev")); // Logging
 app.use(express.json()); // JSON parser
 app.use(cookieParser()); // Parse cookies
-
+app.options('*', cors({
+    origin: allowedOrigins,
+    credentials: true,
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);

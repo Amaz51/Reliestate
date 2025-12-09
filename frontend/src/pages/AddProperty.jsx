@@ -143,12 +143,12 @@ const AddProperty = () => {
 
             {/* Error Message */}
             {error && (
-              <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+              <div className="bg-blue-100 border-l-4 border-blue-700 p-4 mb-6">
                 <div className="flex">
-                  <AlertCircle className="h-6 w-6 text-red-500 mr-3" />
+                  <AlertCircle className="h-6 w-6 text-blue-700 mr-3" />
                   <div>
-                    <p className="font-medium text-red-800">Error</p>
-                    <p className="text-red-700 mt-1">{error}</p>
+                    <p className="font-medium text-blue-900">Error</p>
+                    <p className="text-blue-900 mt-1">{error}</p>
                   </div>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const AddProperty = () => {
                       name="title"
                       type="text"
                       placeholder="e.g. Modern 3 Bedroom House with Garden"
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                       onChange={handleChange}
                       required
                     />
@@ -196,7 +196,7 @@ const AddProperty = () => {
                       name="description"
                       placeholder="Describe your property in detail..."
                       rows={4}
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                       onChange={handleChange}
                       required
                     />
@@ -217,7 +217,7 @@ const AddProperty = () => {
                       name="price"
                       type="number"
                       placeholder="e.g. 250000"
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                       onChange={handleChange}
                       required
                     />
@@ -234,7 +234,7 @@ const AddProperty = () => {
                     name="purpose"
                     value={form.purpose}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                   >
                     <option value="sale">For Sale</option>
                     <option value="rent">For Rent</option>
@@ -260,7 +260,7 @@ const AddProperty = () => {
                       name="type"
                       value={form.type}
                       onChange={handleChange}
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                     >
                       <option value="house">House</option>
                       <option value="apartment">Apartment</option>
@@ -284,7 +284,7 @@ const AddProperty = () => {
                       name="city"
                       type="text"
                       placeholder="e.g. New York"
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                       onChange={handleChange}
                       required
                     />
@@ -305,7 +305,7 @@ const AddProperty = () => {
                       name="areaValue"
                       type="number"
                       placeholder="e.g. 1500"
-                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                       onChange={handleChange}
                       required
                     />
@@ -322,7 +322,7 @@ const AddProperty = () => {
                     name="areaUnit"
                     value={form.areaUnit}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                   >
                     <option value="sqft">Square Feet (sqft)</option>
                     <option value="sqm">Square Meters (sqm)</option>
@@ -341,7 +341,7 @@ const AddProperty = () => {
                     name="bedrooms"
                     type="number"
                     placeholder="e.g. 3"
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                     onChange={handleChange}
                   />
                 </div>
@@ -356,7 +356,7 @@ const AddProperty = () => {
                     name="bathrooms"
                     type="number"
                     placeholder="e.g. 2"
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent"
                     onChange={handleChange}
                   />
                 </div>
@@ -365,7 +365,7 @@ const AddProperty = () => {
                 <div className="md:col-span-2">
                   <h2 className="text-xl font-bold mb-4 pb-2 border-b">Property Images</h2>
                   <div
-                    className={`border-2 border-dashed rounded-lg p-6 text-center ${dragActive ? "border-red-500 bg-red-50" : "border-gray-300"
+                    className={`border-2 border-dashed rounded-lg p-6 text-center ${dragActive ? "border-blue-700 bg-blue-100" : "border-gray-300"
                       }`}
                     onDragEnter={handleDrag}
                     onDragLeave={handleDrag}
@@ -377,7 +377,7 @@ const AddProperty = () => {
                       <p className="text-gray-700 mb-2">Drag and drop your images here, or</p>
                       <label
                         htmlFor="images"
-                        className="cursor-pointer bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
+                        className="cursor-pointer bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
                       >
                         <Plus className="h-4 w-4 mr-2" />
                         Browse Files
@@ -428,7 +428,7 @@ const AddProperty = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-blue-800 hover:bg-blue-900 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>

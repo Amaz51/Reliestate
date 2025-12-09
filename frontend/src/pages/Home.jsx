@@ -46,30 +46,30 @@ const Home = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
-              <HomeIcon className="h-8 w-8 text-red-600" />
+              <HomeIcon className="h-8 w-8 text-blue-900" />
               <span className="ml-2 text-2xl font-bold">ReliEstate</span>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-950 hover:text-red-600 transition-colors">
+              <a href="#features" className="text-gray-950 hover:text-blue-900 transition-colors">
                 Features
               </a>
-              <a href="#how-it-works" className="text-gray-950 hover:text-red-600 transition-colors">
+              <a href="#how-it-works" className="text-gray-950 hover:text-blue-900 transition-colors">
                 How It Works
               </a>
-              <a href="#testimonials" className="text-gray-950 hover:text-red-600 transition-colors">
+              <a href="#testimonials" className="text-gray-950 hover:text-blue-900 transition-colors">
                 Testimonials
               </a>
               <button
                 onClick={handleGoToLogin}
-                className="px-4 py-2 text-red-600 font-medium hover:text-red-700 transition-colors"
+                className="px-4 py-2 text-blue-900 font-medium hover:text-gray-900 transition-colors"
               >
                 Log In
               </button>
               <button
                 onClick={handleGoToSignup}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+                className="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-white hover:text-black transition-colors"
               >
                 Sign Up
               </button>
@@ -88,21 +88,21 @@ const Home = () => {
             <div className="flex flex-col space-y-4">
               <a
                 href="#features"
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className="text-gray-700 hover:text-blue-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a
                 href="#how-it-works"
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className="text-gray-700 hover:text-blue-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 How It Works
               </a>
               <a
                 href="#testimonials"
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className="text-gray-700 hover:text-blue-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
@@ -112,7 +112,7 @@ const Home = () => {
                   handleGoToLogin()
                   setIsMenuOpen(false)
                 }}
-                className="px-4 py-2 text-red-600 font-medium hover:text-red-700 transition-colors text-left"
+                className="px-4 py-2 text-blue-900 font-medium hover:text-blue-700 transition-colors text-left"
               >
                 Log In
               </button>
@@ -121,7 +121,7 @@ const Home = () => {
                   handleGoToSignup()
                   setIsMenuOpen(false)
                 }}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+                className="px-4 py-2 bg-blue-900 text-white hover:text-black rounded-md hover:bg-white transition-colors"
               >
                 Sign Up
               </button>
@@ -154,7 +154,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={handleGoToDashboard}
-                  className="px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors flex items-center justify-center"
+                  className="px-6 py-3 bg-blue-900 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
                 >
                   Browse Properties
                   <ChevronRight className="ml-2 h-5 w-5" />
@@ -184,8 +184,8 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <Search className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <Search className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Easy Property Search</h3>
               <p className="text-gray-600">
@@ -195,8 +195,8 @@ const Home = () => {
 
             {/* Feature 2 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <Building className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <Building className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Extensive Listings</h3>
               <p className="text-gray-600">
@@ -206,8 +206,8 @@ const Home = () => {
 
             {/* Feature 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <DollarSign className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <DollarSign className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Competitive Pricing</h3>
               <p className="text-gray-600">
@@ -217,8 +217,8 @@ const Home = () => {
 
             {/* Feature 4 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <Shield className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <Shield className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Secure Transactions</h3>
               <p className="text-gray-600">
@@ -228,8 +228,8 @@ const Home = () => {
 
             {/* Feature 5 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <Users className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <Users className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Expert Support</h3>
               <p className="text-gray-600">
@@ -239,8 +239,8 @@ const Home = () => {
 
             {/* Feature 6 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="bg-red-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                <HomeIcon className="h-7 w-7 text-red-600" />
+              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                <HomeIcon className="h-7 w-7 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold mb-3">Virtual Tours</h3>
               <p className="text-gray-600">
@@ -321,7 +321,7 @@ const Home = () => {
                 incredibly helpful throughout the process."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold">JD</span>
                 </div>
                 <div className="ml-4">
@@ -343,7 +343,7 @@ const Home = () => {
                 listings and user-friendly interface."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold">JS</span>
                 </div>
                 <div className="ml-4">
@@ -365,7 +365,7 @@ const Home = () => {
                 visiting properties."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold">RJ</span>
                 </div>
                 <div className="ml-4">
@@ -379,7 +379,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-red-600 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Perfect Property?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -388,7 +388,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleGoToSignup}
-              className="px-8 py-3 bg-white text-red-600 rounded-md hover:bg-gray-100 transition-colors font-medium"
+              className="px-8 py-3 bg-white text-blue-900 rounded-md hover:bg-gray-100 transition-colors font-medium"
             >
               Sign Up Now
             </button>
@@ -409,7 +409,7 @@ const Home = () => {
             {/* Company Info */}
             <div>
               <div className="flex items-center mb-4">
-                <HomeIcon className="h-6 w-6 text-red-600" />
+                <HomeIcon className="h-6 w-6 text-blue-900" />
                 <span className="ml-2 text-xl font-bold">ReliEstate</span>
               </div>
               <p className="text-gray-400 mb-4">Your trusted partner for all your real estate needs.</p>

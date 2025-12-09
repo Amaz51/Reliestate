@@ -43,7 +43,7 @@ const PropertyForm = ({
               onChange={onChange}
               type="text"
               placeholder="e.g. Modern 3 Bedroom House with Garden"
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -61,7 +61,7 @@ const PropertyForm = ({
               onChange={onChange}
               placeholder="Describe your property in detail..."
               rows={4}
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -79,7 +79,7 @@ const PropertyForm = ({
               onChange={onChange}
               type="number"
               placeholder="e.g. 250000"
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -91,7 +91,7 @@ const PropertyForm = ({
             name="purpose"
             value={form.purpose}
             onChange={onChange}
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
           >
             <option value="sale">For Sale</option>
             <option value="rent">For Rent</option>
@@ -112,7 +112,7 @@ const PropertyForm = ({
               name="type"
               value={form.type}
               onChange={onChange}
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
             >
               <option value="house">House</option>
               <option value="apartment">Apartment</option>
@@ -134,7 +134,7 @@ const PropertyForm = ({
               onChange={onChange}
               type="text"
               placeholder="e.g. New York"
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -152,7 +152,7 @@ const PropertyForm = ({
               onChange={onChange}
               type="number"
               placeholder="e.g. 1500"
-              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+              className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -164,7 +164,7 @@ const PropertyForm = ({
             name="areaUnit"
             value={form.areaUnit}
             onChange={onChange}
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
           >
             <option value="sqft">Square Feet</option>
             <option value="sqm">Square Meters</option>
@@ -181,7 +181,7 @@ const PropertyForm = ({
             onChange={onChange}
             type="number"
             placeholder="e.g. 3"
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -193,7 +193,7 @@ const PropertyForm = ({
             onChange={onChange}
             type="number"
             placeholder="e.g. 2"
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-red-500"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -206,7 +206,7 @@ const PropertyForm = ({
               <p className="text-gray-700 mb-2">Drag and drop your images here, or</p>
               <label
                 htmlFor="images"
-                className="cursor-pointer bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md inline-flex items-center"
+                className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md inline-flex items-center"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Browse Files
@@ -251,7 +251,7 @@ const PropertyForm = ({
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium flex items-center justify-center disabled:opacity-70"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium flex items-center justify-center disabled:opacity-70"
         >
           {loading ? (
             <>

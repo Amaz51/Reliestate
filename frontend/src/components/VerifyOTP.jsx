@@ -36,7 +36,7 @@ const VerifyOTP = () => {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative z-10 text-white text-center px-8">
           <div className="flex items-center justify-center mb-6">
-            <Home className="w-12 h-12 text-red-600 mr-2" />
+            <Home className="w-12 h-12 text-blue-600 mr-2" />
             <h1 className="text-4xl font-bold">ReliEstate</h1>
           </div>
           <p className="text-xl mb-4">Almost there!</p>
@@ -48,11 +48,11 @@ const VerifyOTP = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           <div className="lg:hidden flex items-center justify-center mb-8">
-            <Home className="w-10 h-10 text-red-600 mr-2" />
+            <Home className="w-10 h-10 text-blue-600 mr-2" />
             <h1 className="text-3xl font-bold">ReliEstate</h1>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-red-600">
+          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
             <h2 className="text-2xl font-bold mb-2 text-center text-gray-800">Verify Your Email</h2>
             <p className="text-center text-gray-600 mb-6">
               We've sent a verification code to <span className="font-medium">{email || "your email"}</span>
@@ -74,7 +74,7 @@ const VerifyOTP = () => {
                     inputMode="numeric"
                     pattern="\d*"
                     placeholder="Enter 6-digit code"
-                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-center tracking-widest font-medium"
+                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center tracking-widest font-medium"
                     value={otp}
                     onChange={(e) => setOtp(e.target.value)}
                     maxLength={6}
@@ -87,7 +87,7 @@ const VerifyOTP = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium transition duration-200 ease-in-out transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium transition duration-200 ease-in-out transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {loading ? "Verifying..." : "Verify Code"}
               </button>
@@ -103,7 +103,7 @@ const VerifyOTP = () => {
                     // Add resend OTP functionality here
                     toast.info("A new verification code has been sent to your email.")
                   }}
-                  className="text-red-600 hover:text-red-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 font-medium"
                 >
                   Resend Code
                 </a>
@@ -118,7 +118,7 @@ const VerifyOTP = () => {
                     e.preventDefault()
                     navigate("/login")
                   }}
-                  className="text-red-600 hover:text-red-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 font-medium"
                 >
                   Back to Login
                 </a>

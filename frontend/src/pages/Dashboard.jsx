@@ -68,15 +68,15 @@ const Dashboard = () => {
           {/* Main Actions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
             {/* Card 1: Browse Listings */}
-            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-red-600">
+            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-blue-600">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-red-100 p-3 rounded-full">
-                  <Search className="text-red-600 h-6 w-6" />
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <Search className="text-blue-600 h-6 w-6" />
                 </div>
                 <h2 className="text-xl font-bold">Browse Listings</h2>
               </div>
               <p className="text-gray-600 mb-6">Find the perfect property that matches your needs.</p>
-              <Link to="/browse" className="text-red-600 hover:text-red-800 font-medium flex items-center">
+              <Link to="/browse" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                 See Listings
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,15 +91,15 @@ const Dashboard = () => {
             </div>
 
             {/* Card 2: Add Property */}
-            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-red-600">
+            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-blue-600">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-red-100 p-3 rounded-full">
-                  <PlusCircle className="text-red-600 h-6 w-6" />
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <PlusCircle className="text-blue-600 h-6 w-6" />
                 </div>
                 <h2 className="text-xl font-bold">Add Property</h2>
               </div>
               <p className="text-gray-600 mb-6">List your property for sale or rent on our platform.</p>
-              <Link to="/add-property" className="text-red-600 hover:text-red-800 font-medium flex items-center">
+              <Link to="/add-property" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                 Add Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,15 +114,15 @@ const Dashboard = () => {
             </div>
 
             {/* Card 3: My Inquiries */}
-            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-red-600">
+            <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-blue-600">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-red-100 p-3 rounded-full">
-                  <MessageSquare className="text-red-600 h-6 w-6" />
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <MessageSquare className="text-blue-600 h-6 w-6" />
                 </div>
                 <h2 className="text-xl font-bold">My Inquiries</h2>
               </div>
               <p className="text-gray-600 mb-6">Manage inquiries about your listed properties.</p>
-              <Link to="/inquiries" className="text-red-600 hover:text-red-800 font-medium flex items-center">
+              <Link to="/inquiries" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                 View Inquiries
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,15 +138,15 @@ const Dashboard = () => {
 
             {/* Card 4: Admin Dashboard (conditional) */}
             {user?.role === "admin" && (
-              <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-red-600">
+              <div className="bg-white rounded-lg shadow-sm p-6 transition-transform hover:shadow-md hover:-translate-y-1 border-t-4 border-blue-600">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-red-100 p-3 rounded-full">
-                    <LayoutDashboard className="text-red-600 h-6 w-6" />
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <LayoutDashboard className="text-blue-600 h-6 w-6" />
                   </div>
                   <h2 className="text-xl font-bold">Admin Dashboard</h2>
                 </div>
                 <p className="text-gray-600 mb-6">Manage listings and view platform insights.</p>
-                <Link to="/admin/dashboard" className="text-red-600 hover:text-red-800 font-medium flex items-center">
+                <Link to="/admin/dashboard" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                   View Dashboard
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -169,12 +169,12 @@ const Dashboard = () => {
             {/* Loading State */}
             {loading ? (
               <div className="flex flex-col items-center justify-center py-12">
-                <Loader className="h-8 w-8 text-red-600 animate-spin mb-4" />
+                <Loader className="h-8 w-8 text-blue-600 animate-spin mb-4" />
                 <p className="text-gray-600">Loading your properties...</p>
               </div>
             ) : error ? (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-                <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+              <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+                <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
                 <span>{error}</span>
               </div>
             ) : properties.length === 0 ? (
@@ -184,7 +184,7 @@ const Dashboard = () => {
                 <p className="text-gray-500 mb-6">You haven't listed any properties yet.</p>
                 <Link
                   to="/add-property"
-                  className="inline-flex items-center justify-center px-5 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+                  className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                 >
                   <PlusCircle className="h-5 w-5 mr-2" />
                   Add Your First Property
@@ -206,7 +206,7 @@ const Dashboard = () => {
                       <div className="absolute top-0 left-0 m-2">
                         <span
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            property.purpose === "rent" ? "bg-blue-600" : "bg-red-600"
+                            property.purpose === "rent" ? "bg-blue-600" : "bg-blue-600"
                           } text-white`}
                         >
                           {property.purpose === "rent" ? "For Rent" : "For Sale"}
@@ -221,7 +221,7 @@ const Dashboard = () => {
                         <span className="text-sm">{property.city}</span>
                       </div>
                       <div className="flex items-center text-gray-900 font-bold mb-4">
-                        <DollarSign className="h-5 w-5 text-red-600" />
+                        <DollarSign className="h-5 w-5 text-blue-600" />
                         <span>{formatPrice(property.price)}</span>
                         {property.purpose === "rent" && <span className="text-sm font-normal ml-1">/month</span>}
                       </div>
@@ -229,7 +229,7 @@ const Dashboard = () => {
                       <div className="flex justify-between mt-4">
                         <Link
                           to={`/properties/${property.slug}`}
-                          className="text-gray-600 hover:text-red-600 transition-colors text-sm font-medium"
+                          className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
                         >
                           View Details
                         </Link>
@@ -244,7 +244,7 @@ const Dashboard = () => {
                           <button
                             onClick={() => handleDelete(property.id)}
                             disabled={isDeleting === property.id}
-                            className="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-md hover:bg-red-200 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-md hover:bg-blue-200 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isDeleting === property.id ? (
                               <Loader className="w-3 h-3 animate-spin" />

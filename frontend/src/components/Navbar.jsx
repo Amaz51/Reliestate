@@ -42,7 +42,7 @@ const Navbar = () => {
           {/* Logo and Brand */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Home className="h-8 w-8 text-red-600 mr-2" />
+              <Home className="h-8 w-8 text-blue-600 mr-2" />
               <span className="text-xl font-bold">ReliEstate</span>
             </Link>
           </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium flex items-center ${
                   location.pathname === link.path
-                    ? "bg-red-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "text-gray-300 hover:bg-gray-800 hover:text-white"
                 } transition-colors`}
               >
@@ -73,7 +73,7 @@ const Navbar = () => {
                 onClick={() => setOpen(!open)}
                 className="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               >
-                <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
+                <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center">
                   <User className="h-5 w-5 text-white" />
                 </div>
                 <span className="ml-2 hidden md:flex items-center text-gray-300">
@@ -142,7 +142,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`block px-3 py-2 rounded-md text-base font-medium flex items-center ${
                   location.pathname === link.path
-                    ? "bg-red-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "text-gray-300 hover:bg-gray-700 hover:text-white"
                 }`}
               >

@@ -81,7 +81,7 @@ const EditProfile = () => {
     setErrorMsg(null)
 
     try {
-      await axios.put("http://localhost:5000/api/users/update-profile", formData, {
+      await axios.put("http://localhost:5001/api/users/update-profile", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -108,7 +108,7 @@ const EditProfile = () => {
           {/* Back Link */}
           <Link
             to="/dashboard"
-            className="inline-flex items-center text-gray-100 hover:text-red-600 transition-colors mt-6"
+            className="inline-flex items-center text-gray-100 hover:text-blue-600 transition-colors mt-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Dashboard
@@ -122,12 +122,12 @@ const EditProfile = () => {
           {/* Loading State */}
           {loading ? (
             <div className="flex items-center justify-center py-12 bg-white rounded-lg shadow-sm">
-              <Loader className="h-8 w-8 text-red-600 animate-spin mr-3" />
+              <Loader className="h-8 w-8 text-blue-600 animate-spin mr-3" />
               <span className="text-gray-600">Loading your profile information...</span>
             </div>
           ) : error ? (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-              <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+            <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+              <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
               <span>{error}</span>
             </div>
           ) : (
@@ -146,12 +146,12 @@ const EditProfile = () => {
 
               {/* Error Message */}
               {errorMsg && (
-                <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
                   <div className="flex">
-                    <AlertCircle className="h-6 w-6 text-red-500 mr-3" />
+                    <AlertCircle className="h-6 w-6 text-blue-500 mr-3" />
                     <div>
-                      <p className="font-medium text-red-800">Error</p>
-                      <p className="text-red-700 mt-1">{errorMsg}</p>
+                      <p className="font-medium text-blue-800">Error</p>
+                      <p className="text-blue-700 mt-1">{errorMsg}</p>
                     </div>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const EditProfile = () => {
                         placeholder="Your full name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
                     </div>
@@ -224,7 +224,7 @@ const EditProfile = () => {
                         placeholder="Your phone number"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -253,7 +253,7 @@ const EditProfile = () => {
                         placeholder="Years of experience"
                         value={formData.brokerInfo.experience}
                         onChange={handleChange}
-                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -274,7 +274,7 @@ const EditProfile = () => {
                         placeholder="Your agency name"
                         value={formData.brokerInfo.agencyName}
                         onChange={handleChange}
-                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -295,7 +295,7 @@ const EditProfile = () => {
                         placeholder="Your license number"
                         value={formData.brokerInfo.licenseNumber}
                         onChange={handleChange}
-                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -306,7 +306,7 @@ const EditProfile = () => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {submitting ? (
                       <>

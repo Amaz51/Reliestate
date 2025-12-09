@@ -248,7 +248,7 @@ exports.forgetPassword = async (req, res) => {
         // Check if user exists (but don’t reveal if not, for security)
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(200).json({ message: "Invalid Email" });
+            return res.status(404).json({ message: "Invalid Email" });
         }
 
         // Check cooldown (3 minutes = 180 seconds)

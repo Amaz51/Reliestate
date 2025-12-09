@@ -94,20 +94,20 @@ const UserProfile = () => {
         {/* User Info Section */}
         {userLoading ? (
           <div className="flex items-center justify-center py-12">
-            <Loader className="h-8 w-8 text-red-600 animate-spin mr-3" />
+            <Loader className="h-8 w-8 text-blue-600 animate-spin mr-3" />
             <span className="text-gray-600">Loading user information...</span>
           </div>
         ) : userError ? (
-          <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-            <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+          <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+            <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
             <span>{userError}</span>
           </div>
         ) : user ? (
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               {/* User Avatar */}
-              <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <User className="h-12 w-12 text-red-600" />
+              <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <User className="h-12 w-12 text-blue-600" />
               </div>
 
               {/* User Details */}
@@ -147,7 +147,7 @@ const UserProfile = () => {
               {/* Contact Button (only show if viewing someone else's profile) */}
               {authUser !== userId && (
                 <div className="flex-shrink-0 w-full md:w-auto">
-                  <button className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-md transition-colors">
+                  <button className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition-colors">
                     Contact Agent
                   </button>
                 </div>
@@ -165,12 +165,12 @@ const UserProfile = () => {
 
           {propertiesLoading ? (
             <div className="flex items-center justify-center py-12">
-              <Loader className="h-8 w-8 text-red-600 animate-spin mr-3" />
+              <Loader className="h-8 w-8 text-blue-600 animate-spin mr-3" />
               <span className="text-gray-600">Loading properties...</span>
             </div>
           ) : propertiesError ? (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-              <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+            <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+              <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
               <span>{propertiesError}</span>
             </div>
           ) : properties?.length > 0 ? (
@@ -195,7 +195,7 @@ const UserProfile = () => {
                       <div className="absolute top-2 right-2">
                         <span
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            property.purpose === "rent" ? "bg-blue-600" : "bg-red-600"
+                            property.purpose === "rent" ? "bg-blue-600" : "bg-blue-600"
                           } text-white`}
                         >
                           {property.purpose === "rent" ? "For Rent" : "For Sale"}
@@ -252,7 +252,7 @@ const UserProfile = () => {
                           onClick={() => setPage(pageNum)}
                           className={`w-10 h-10 mx-1 rounded-md flex items-center justify-center ${
                             page === pageNum
-                              ? "bg-red-600 text-white"
+                              ? "bg-blue-600 text-white"
                               : "border border-gray-300 hover:bg-gray-100 transition-colors"
                           }`}
                         >
@@ -287,12 +287,12 @@ const UserProfile = () => {
 
           {reviewsLoading ? (
             <div className="flex items-center justify-center py-8">
-              <Loader className="h-6 w-6 text-red-600 animate-spin mr-3" />
+              <Loader className="h-6 w-6 text-blue-600 animate-spin mr-3" />
               <span className="text-gray-600">Loading reviews...</span>
             </div>
           ) : reviewsError ? (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-              <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+            <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+              <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
               <span>{reviewsError}</span>
             </div>
           ) : reviews.length > 0 ? (

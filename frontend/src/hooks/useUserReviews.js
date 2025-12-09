@@ -16,7 +16,7 @@ export const useUserReviews = (userId, token, page = 1, limit = 10) => {
 
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/users/${userId}/reviews?page=${page}&limit=${limit}`,
+          `http://localhost:5001/api/users/${userId}/reviews?page=${page}&limit=${limit}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

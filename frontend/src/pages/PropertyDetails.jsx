@@ -76,7 +76,7 @@ const PropertyDetails = () => {
   if (loading)
     return (
       <div className="flex flex-col items-center justify-center min-h-screen py-20">
-        <Loader className="h-12 w-12 text-red-600 animate-spin mb-4" />
+        <Loader className="h-12 w-12 text-blue-600 animate-spin mb-4" />
         <p className="text-gray-600">Loading property details...</p>
       </div>
     )
@@ -84,10 +84,10 @@ const PropertyDetails = () => {
   if (error)
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="bg-red-50 border border-red-200 text-red-700 px-6 py-8 rounded-lg text-center max-w-md">
-          <X className="h-12 w-12 text-red-600 mx-auto mb-4" />
+        <div className="bg-blue-50 border border-blue-200 text-blue-700 px-6 py-8 rounded-lg text-center max-w-md">
+          <X className="h-12 w-12 text-blue-600 mx-auto mb-4" />
           <p className="text-lg font-medium mb-4">{error}</p>
-          <Link to="/browse" className="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
+          <Link to="/browse" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Properties
           </Link>
@@ -101,7 +101,7 @@ const PropertyDetails = () => {
         <div className="bg-gray-50 border border-gray-200 text-gray-700 px-6 py-8 rounded-lg text-center max-w-md">
           <Home className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <p className="text-lg font-medium mb-4">No property found.</p>
-          <Link to="/browse" className="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
+          <Link to="/browse" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Properties
           </Link>
@@ -201,7 +201,7 @@ const PropertyDetails = () => {
               <div>
                 <div className="flex items-center mb-2">
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${purpose === "rent" ? "bg-blue-600" : "bg-red-600"
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${purpose === "rent" ? "bg-blue-600" : "bg-blue-600"
                       } text-white mr-2`}
                   >
                     {purpose === "rent" ? "For Rent" : "For Sale"}
@@ -221,7 +221,7 @@ const PropertyDetails = () => {
                 </div>
               </div>
               <div className="mt-4 md:mt-0 flex flex-col items-end">
-                <div className="text-3xl font-bold text-red-600 mb-2">
+                <div className="text-3xl font-bold text-blue-600 mb-2">
                   ${formatPrice(price)}
                   {purpose === "rent" && <span className="text-sm font-normal">/month</span>}
                 </div>
@@ -230,7 +230,7 @@ const PropertyDetails = () => {
                     onClick={() => setIsFavorite(!isFavorite)}
                     className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                   >
-                    <Heart className={`h-5 w-5 mr-2 ${isFavorite ? "fill-red-600 text-red-600" : "text-gray-600"}`} />
+                    <Heart className={`h-5 w-5 mr-2 ${isFavorite ? "fill-blue-600 text-blue-600" : "text-gray-600"}`} />
                     <span>{isFavorite ? "Saved" : "Save"}</span>
                   </button>
                   <button className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
@@ -254,8 +254,8 @@ const PropertyDetails = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6">
                   {bedrooms !== undefined && (
                     <div className="flex flex-col items-center text-center">
-                      <div className="bg-red-50 p-3 rounded-full mb-2">
-                        <BedDouble className="h-6 w-6 text-red-600" />
+                      <div className="bg-blue-50 p-3 rounded-full mb-2">
+                        <BedDouble className="h-6 w-6 text-blue-600" />
                       </div>
                       <span className="text-sm text-gray-600">Bedrooms</span>
                       <span className="font-bold">{bedrooms}</span>
@@ -263,8 +263,8 @@ const PropertyDetails = () => {
                   )}
                   {bathrooms !== undefined && (
                     <div className="flex flex-col items-center text-center">
-                      <div className="bg-red-50 p-3 rounded-full mb-2">
-                        <Bath className="h-6 w-6 text-red-600" />
+                      <div className="bg-blue-50 p-3 rounded-full mb-2">
+                        <Bath className="h-6 w-6 text-blue-600" />
                       </div>
                       <span className="text-sm text-gray-600">Bathrooms</span>
                       <span className="font-bold">{bathrooms}</span>
@@ -272,8 +272,8 @@ const PropertyDetails = () => {
                   )}
                   {area && (
                     <div className="flex flex-col items-center text-center">
-                      <div className="bg-red-50 p-3 rounded-full mb-2">
-                        <Maximize className="h-6 w-6 text-red-600" />
+                      <div className="bg-blue-50 p-3 rounded-full mb-2">
+                        <Maximize className="h-6 w-6 text-blue-600" />
                       </div>
                       <span className="text-sm text-gray-600">Area</span>
                       <span className="font-bold">
@@ -283,8 +283,8 @@ const PropertyDetails = () => {
                   )}
                   {availabilityDate && (
                     <div className="flex flex-col items-center text-center">
-                      <div className="bg-red-50 p-3 rounded-full mb-2">
-                        <Calendar className="h-6 w-6 text-red-600" />
+                      <div className="bg-blue-50 p-3 rounded-full mb-2">
+                        <Calendar className="h-6 w-6 text-blue-600" />
                       </div>
                       <span className="text-sm text-gray-600">Available From</span>
                       <span className="font-bold">{formatDate(availabilityDate)}</span>
@@ -386,12 +386,12 @@ const PropertyDetails = () => {
                 <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
                   <h2 className="text-xl font-bold mb-4">Contact Information</h2>
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                      <User className="h-8 w-8 text-red-600" />
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                      <User className="h-8 w-8 text-blue-600" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">{postedBy.name}</h3>
-                      <Link to={`/users/${postedBy._id}`} className="text-red-600 hover:text-red-800 text-sm font-medium">
+                      <Link to={`/users/${postedBy._id}`} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
                         View Profile
                       </Link>
                     </div>
@@ -411,7 +411,7 @@ const PropertyDetails = () => {
                   <div className="mt-6 grid grid-cols-2 gap-4">
                     <a
                       href={`tel:${postedBy.phone}`}
-                      className="bg-red-600 text-white py-2 px-4 rounded-md text-center hover:bg-red-700 transition-colors"
+                      className="bg-blue-600 text-white py-2 px-4 rounded-md text-center hover:bg-blue-700 transition-colors"
                     >
                       Call Now
                     </a>

@@ -36,7 +36,7 @@ const Signup = () => {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative z-10 text-white text-center px-8">
           <div className="flex items-center justify-center mb-6">
-            <Home className="w-12 h-12 text-red-600 mr-2" />
+            <Home className="w-12 h-12 text-blue-600 mr-2" />
             <h1 className="text-4xl font-bold">ReliEstate</h1>
           </div>
           <p className="text-xl mb-4">Join our community today</p>
@@ -48,11 +48,11 @@ const Signup = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           <div className="lg:hidden flex items-center justify-center mb-8">
-            <Home className="w-10 h-10 text-red-600 mr-2" />
+            <Home className="w-10 h-10 text-blue-600 mr-2" />
             <h1 className="text-3xl font-bold">ReliEstate</h1>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-red-600">
+          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Create Your Account</h2>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -69,7 +69,7 @@ const Signup = () => {
                     type="text"
                     id="name"
                     placeholder="John Doe"
-                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -90,7 +90,7 @@ const Signup = () => {
                     type="email"
                     id="email"
                     placeholder="your@email.com"
-                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -111,7 +111,7 @@ const Signup = () => {
                     type="password"
                     id="password"
                     placeholder="••••••••"
-                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="pl-10 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -126,18 +126,18 @@ const Signup = () => {
                   <input
                     id="terms"
                     type="checkbox"
-                    className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                     required
                   />
                 </div>
                 <div className="ml-3 text-sm">
                   <label htmlFor="terms" className="text-gray-600">
                     I agree to the{" "}
-                    <a href="#" className="text-red-600 hover:text-red-800">
+                    <a href="#" className="text-blue-600 hover:text-blue-800">
                       Terms of Service
                     </a>{" "}
                     and{" "}
-                    <a href="#" className="text-red-600 hover:text-red-800">
+                    <a href="#" className="text-blue-600 hover:text-blue-800">
                       Privacy Policy
                     </a>
                   </label>
@@ -148,7 +148,7 @@ const Signup = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-md font-medium transition duration-200 ease-in-out transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium transition duration-200 ease-in-out transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {loading ? "Creating Account..." : "Create Account"}
               </button>
@@ -163,7 +163,7 @@ const Signup = () => {
                     e.preventDefault()
                     navigate("/login")
                   }}
-                  className="text-red-600 hover:text-red-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 font-medium"
                 >
                   Sign in
                 </a>

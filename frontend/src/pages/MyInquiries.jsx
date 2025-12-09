@@ -45,15 +45,15 @@ const MyInquiries = () => {
         {/* Loading State */}
         {loading && (
           <div className="flex items-center justify-center py-12">
-            <Loader className="h-8 w-8 text-red-600 animate-spin mr-3" />
+            <Loader className="h-8 w-8 text-blue-600 animate-spin mr-3" />
             <span className="text-gray-600">Loading inquiries...</span>
           </div>
         )}
 
         {/* Error State */}
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center">
-            <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+          <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg flex items-center">
+            <AlertCircle className="h-5 w-5 text-blue-500 mr-2" />
             <span>{error}</span>
           </div>
         )}
@@ -66,7 +66,7 @@ const MyInquiries = () => {
             <p className="text-gray-500 mb-6">You haven't received any inquiries about your properties yet.</p>
             <Link
               to="/properties"
-              className="inline-flex items-center justify-center px-5 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+              className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Browse Properties
             </Link>
@@ -82,8 +82,8 @@ const MyInquiries = () => {
                   <div className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div className="flex items-center mb-2 md:mb-0">
-                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
-                          <User className="h-5 w-5 text-red-600" />
+                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <User className="h-5 w-5 text-blue-600" />
                         </div>
                         <div>
                           <h2 className="font-bold text-lg">{inq.name}</h2>
@@ -113,7 +113,7 @@ const MyInquiries = () => {
                         <h3 className="font-medium">Property</h3>
                         <Link
                           to={`/properties/${inq?.property?.slug}`}
-                          className="text-red-600 hover:text-red-800 transition-colors"
+                          className="text-blue-600 hover:text-blue-800 transition-colors"
                         >
                           {inq?.property?.title}
                         </Link>
@@ -124,7 +124,7 @@ const MyInquiries = () => {
                   <div className="bg-gray-50 px-6 py-3 border-t flex justify-end">
                     <a
                       href={`tel:${inq.phone}`}
-                      className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
                     >
                       <Phone className="h-4 w-4 mr-2" />
                       Call Back
@@ -166,7 +166,7 @@ const MyInquiries = () => {
                         onClick={() => setPage(pageNum)}
                         className={`w-10 h-10 mx-1 rounded-md flex items-center justify-center ${
                           page === pageNum
-                            ? "bg-red-600 text-white"
+                            ? "bg-blue-600 text-white"
                             : "border border-gray-300 hover:bg-gray-100 transition-colors"
                         }`}
                       >
